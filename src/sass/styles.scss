@@ -1,0 +1,113 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --c-violet: rgb(204, 153, 255);
+    --c-blue: rgb(102, 0, 255);
+    --c-green: rgb(109, 228, 109);
+    --c-yellow: rgb(255, 255, 150);
+    --c-red: rgb(255, 102, 102);
+    --c-mint: rgb(102, 255, 255);
+    --f-ar: 'Arial', sans-serif;
+}
+
+body {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    font-family: var(--f-ar);
+
+    background: {
+        image: url(../images/Whatsapp-Backgrounds-lite.jpg);
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+        attachment: fixed;
+    }
+    overflow: hidden;
+}
+
+.page-number {
+    color: var(--c-red);
+    font-size: 35px;
+}
+.material-icons.md-light {
+    color: var(--c-violet);
+    vertical-align: bottom;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    list-style: none;
+    margin: 20px;
+    padding-left: 0;
+}
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.stats-item {
+    color: var(--c-red);
+    font-size: 15px;
+}
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input {
+    display: flex;
+    margin: 30px auto 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    border: 2px solid var(--c-violet);
+    padding-left: 10px;
+
+    &:focus {
+        outline: none;
+        border-color: var(--c-red);
+    }
+
+    &::placeholder {
+        color: var(--c-mint);
+    }
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding: 5px 5px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: var(--c-green);
+    color: white;
+    &:focus {
+        outline: none;
+        border-color: var(--c-blue);
+    }
+}
+
+.btn-loadmore.hidden {
+    display: none;
+}
+
+.btn > .btn-loadmore.hidden {
+    display: none;
+}
